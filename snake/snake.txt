@@ -1,0 +1,2 @@
+Carpeta encargada de almacenar todo el codigo de Three.js
+Mantiene COMPONENTES.
