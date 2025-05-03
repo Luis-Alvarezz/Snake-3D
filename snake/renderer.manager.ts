@@ -1,12 +1,13 @@
-import { RenderTargetArray, Scene, WebGLRenderer } from "three";
+import { RenderTargetArray, WebGLRenderer } from "three";
+import SceneManager from "./scene.manager";
 
 export default class RendererManager {
     // * Clase encargada de renderer, post procesado, redimensionamiento de la pantalla, singleton (instaciar 1 vez unicamente la clase principal)
     private static renderer: WebGLRenderer;
-    private static scene: Scene;
     public static canvas: HTMLCanvasElement;
 
     private constructor() {
+        SceneManager.init();
         RendererManager.init();
         window.addEventListener('resize', RendererManager.rezise);
         RendererManager.renderLoop();
