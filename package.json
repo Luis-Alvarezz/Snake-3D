@@ -1,0 +1,27 @@
+{
+  "name": "project-2-snake3d",
+  "version": "1.0.0",
+  "description": "Project about Three.js for learn and practice 3D projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Alvarezz/Snake-3D.git"
+  },
+  "author": "Luis Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luis-Alvarezz/Snake-3D/issues"
+  },
+  "homepage": "https://github.com/Luis-Alvarezz/Snake-3D#readme",
+  "dependencies": {
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
