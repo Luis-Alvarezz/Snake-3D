@@ -15,6 +15,7 @@ export default class SceneManager {
         // const diorama = new Diorama();
         // diorama.start();
         SceneManager.onReady();
+        
     }
 
     private static createScene() : void {
