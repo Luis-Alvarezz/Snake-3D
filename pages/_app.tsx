@@ -1,5 +1,6 @@
 import "../styles/main.css"
 import "../styles/menu.css"
+import "../styles/panel.css"
 import App from "next/app";
 import { JSX } from "react"; // * para indicar el tipo de retorno de render
 
