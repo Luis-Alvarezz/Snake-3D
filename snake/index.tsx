@@ -1,5 +1,6 @@
 import { Component, ReactNode } from "react";
 import RendererManager from "./renderer.manager";
+import { Menu } from "./ui/menu";
 
 export default class SnakeComponent extends Component {
 
@@ -11,6 +12,7 @@ export default class SnakeComponent extends Component {
         return (
             <div>
                 <canvas id="game" className="fullscreen"></canvas>
+                <Menu />
             </div>
         )
     }
