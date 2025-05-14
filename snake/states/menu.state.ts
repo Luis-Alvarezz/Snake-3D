@@ -12,8 +12,6 @@ export default class MenuState extends State {
     public exit(): void {
         // throw new Error("Method not implemented.");
     }
-    
-    
 }
 
 // * Este codigo es mas particular, dependiendo del contexto de cada estado
