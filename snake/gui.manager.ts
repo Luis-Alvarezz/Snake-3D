@@ -29,4 +29,14 @@ export class GUIManager {
         const menu = document.getElementById("menu");
         menu.textContent = '';
     }
+
+
+    public static showHTML(id: string, style = 'block') : void {
+        const element = document.getElementById(id);
+        element.style.display = style;
+    }
+    public static hiddenHTML(id: string) : void {
+        const element = document.getElementById(id);
+        element.style.display = 'none';
+    }
 }
