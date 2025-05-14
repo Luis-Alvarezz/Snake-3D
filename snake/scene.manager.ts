@@ -1,8 +1,8 @@
+import State from "./states/state";
+import States from "./states/states";
 import { Color, HemisphereLight, PerspectiveCamera, Scene } from "three";
 import Diorama from "./classes/diorama";
 import MenuState from "./states/menu.state";
-import State from "./states/state";
-import States from "./states/states";
 
 export default class SceneManager {
     public static scene: Scene;
