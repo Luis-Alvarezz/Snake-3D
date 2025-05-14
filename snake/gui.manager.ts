@@ -1,0 +1,32 @@
+import State from "./states/state";
+import States from "./states/states";
+
+export class GUIManager {
+    // * Metodos para menipular DOM
+    public static menuButtons(): void {
+        const menu = document.getElementById("menu");
+        const credit = document.createElement("BUTTON");
+        credit.className = 'button';
+        credit.innerHTML = 'CREDITOS'
+        credit.onclick = () => {
+            State.setCurrent(States.credit)
+        }
+        menu.appendChild(credit);
+    }
+
+    public static creditButtons(): void {
+        const menu = document.getElementById("menu");
+        const back = document.createElement("BUTTON");
+        back.className = 'button';
+        back.innerHTML = 'ATRAS'
+        back.onclick = () => {
+            State.setCurrent(States.menu)
+        }
+        menu.appendChild(back);
+    }
+
+    public static clearButtons(): void {
+        const menu = document.getElementById("menu");
+        menu.textContent = '';
+    }
+}
