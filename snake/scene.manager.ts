@@ -1,5 +1,8 @@
 import { Color, HemisphereLight, PerspectiveCamera, Scene } from "three";
 import Diorama from "./classes/diorama";
+import MenuState from "./states/menu.state";
+import State from "./states/state";
+import States from "./states/states";
 
 export default class SceneManager {
     public static scene: Scene;
@@ -9,9 +12,9 @@ export default class SceneManager {
         SceneManager.createScene();
         SceneManager.createCamera();
         SceneManager.createLights();
-
-        const diorama = new Diorama();
-        diorama.start();
+        // const diorama = new Diorama();
+        // diorama.start();
+        SceneManager.onReady();
     }
 
     private static createScene() : void {
@@ -30,5 +33,12 @@ export default class SceneManager {
         const ligth = new HemisphereLight(0xffffff, 0.2);
         ligth.position.set(100,100,100);
         SceneManager.scene.add(ligth);
+    }
+
+    // * Metodo que se ejecuta cuando el diorama esta listo para usar o cuando se cargan los assets o los objetos, texturas, modelos, etc.
+    private static onReady(): void {
+        MenuState.diorama = new Diorama();
+        State.setCurrent(States.menu);
+        MenuState.diorama.start();
     }
 }

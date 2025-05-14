@@ -32,7 +32,7 @@ export default class Diorama implements LifeCycle {
     }
 
     private rotateCamera(): void {
-        const offset = new Vector3()
+        const offset = new Vector3()  // * offset: distancia de la camara al modelo
         offset.x = this.distance * Math.sin(this.time * 0.1);
         offset.y = 5;
         offset.z = this.distance * Math.cos(this.time * 0.1);
