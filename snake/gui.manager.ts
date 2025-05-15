@@ -11,6 +11,13 @@ export class GUIManager {
         credit.onclick = () => {
             State.setCurrent(States.credit)
         }
+        const game = document.createElement("BUTTON");
+        game.className = 'button';
+        game.innerHTML = 'JUGAR'
+        game.onclick = () => {
+            State.setCurrent(States.game)
+        }
+        menu.appendChild(game)
         menu.appendChild(credit);
     }
 
