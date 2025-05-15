@@ -3,6 +3,8 @@ import States from "./states/states";
 import { Color, HemisphereLight, PerspectiveCamera, Scene } from "three";
 import Diorama from "./classes/diorama";
 import MenuState from "./states/menu.state";
+import GameState from "./states/game.state";
+import Game from "./classes/game";
 
 export default class SceneManager {
     public static scene: Scene;
@@ -39,6 +41,7 @@ export default class SceneManager {
     // * Metodo que se ejecuta cuando el diorama esta listo para usar o cuando se cargan los assets o los objetos, texturas, modelos, etc.
     private static onReady(): void {
         MenuState.diorama = new Diorama();
+        GameState.game = new Game();
         State.setCurrent(States.menu);
         MenuState.diorama.start();
     }
